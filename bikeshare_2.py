@@ -79,11 +79,11 @@ def time_stats(df):
 
     # TO DO: display the most common month
 
-    print("\nThe most common month is: ", df['Month of Trip'].mode().to_string(index=False))
+    print("\nThe most frequently traveled month is: ", df['Month of Trip'].mode().to_string(index=False))
 
     # TO DO: display the most common day of week
 
-    print("\nThe most common weekday is: ", df['Weekday of Trip'].mode().to_string(index=False))
+    print("\nThe most frequently traveled weekday is: ", df['Weekday of Trip'].mode().to_string(index=False))
 
     # TO DO: display the most common start hour
 
@@ -171,17 +171,25 @@ def user_stats(df):
 
 def display_data(df):
 
-    more_data = 'yes'
+    display_data = 'yes'
     times_through = 1
     x = 0
+    i = 0
 
-    while more_data == 'yes':
-        more_data = input("Would you like to see the raw data? ").lower()
-        if more_data != 'yes':
+    ##while more_data == 'yes':
+        ## more_data = input("Would you like to see the raw data? ").lower()
+        ## if more_data != 'yes':
+        ##     break
+        ## print(df.iloc[x:times_through * 5])
+        ## x = times_through * 5
+        ## times_through += 1
+
+    while True:
+        display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+        if display_data.lower() != 'yes':
             break
-        print(df.iloc[x:times_through * 5])
-        x = times_through * 5
-        times_through += 1
+        print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers ="keys"))
+        i+=5
 
 
 def main():
