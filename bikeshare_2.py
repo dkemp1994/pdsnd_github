@@ -79,11 +79,11 @@ def time_stats(df):
 
     # TO DO: display the most common month
 
-    print("\nThe most common month is: ", df['Month of Trip'].mode().to_string(index=False))
+    print("\nThe most frequently traveled month is: ", df['Month of Trip'].mode().to_string(index=False))
 
     # TO DO: display the most common day of week
 
-    print("\nThe most common weekday is: ", df['Weekday of Trip'].mode().to_string(index=False))
+    print("\nThe most frequently traveled weekday is: ", df['Weekday of Trip'].mode().to_string(index=False))
 
     # TO DO: display the most common start hour
 
