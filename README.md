@@ -5,7 +5,7 @@ February 18, 2021
 Bikeshare Project
 
 ### Description
-This project uses Python to gather user input and display statistics regarding bikeshare programs in three different cities - Chicago, Washington, DC, and New York City.
+This project uses Python to gather user input and display statistics regarding bikeshare programs in three different cities - Chicago, Washington, DC, and New York City. Users are prompted with several questions to determine what statistics are displayed.
 
 ### Files used
 bikeshare_2.py
